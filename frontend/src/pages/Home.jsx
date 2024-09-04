@@ -5,29 +5,45 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <Container maxWidth="md" sx={{ mt: 8, textAlign: "center" }}>
+    <Container
+      maxWidth="md"
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "flex-start", // Align items towards the top
+        minHeight: "100vh", // Full height of the viewport
+        paddingTop: "120px", // Move content up by increasing top padding
+        paddingBottom: "40px", // Extra bottom padding
+        textAlign: "center",
+      }}
+    >
       <Typography
         variant="h3"
         component="h1"
         sx={{
           fontWeight: "bold",
-          color: "#333",
+          color: "#00796b", // Teal color for the title
           mb: 4,
         }}
       >
         Welcome to AfriLLM
       </Typography>
+
       <Typography
         variant="h5"
         component="p"
         sx={{
-          color: "#555",
+          color: "#555", // Soft grey for the subtitle
           mb: 6,
+          lineHeight: 1.6, // Increase line height for better readability
+          maxWidth: "700px", // Limit text width for readability
         }}
       >
         Unlock the potential of large language models designed specifically for
         Africa. Sign up today to get started, or sign in to continue exploring!
       </Typography>
+
       <Box sx={{ display: "flex", justifyContent: "center", gap: 2 }}>
         <Button
           variant="contained"
@@ -39,12 +55,15 @@ const Home = () => {
             "&:hover": {
               backgroundColor: "#004d40",
             },
-            padding: "10px 20px",
+            padding: "12px 24px",
             fontSize: "1.2rem",
+            borderRadius: "8px", // Rounded corners for a modern look
+            fontWeight: "bold", // Bold text for emphasis
           }}
         >
           Get Started
         </Button>
+
         <Button
           variant="outlined"
           color="primary"
@@ -57,8 +76,10 @@ const Home = () => {
               borderColor: "#004d40",
               color: "#004d40",
             },
-            padding: "10px 20px",
+            padding: "12px 24px",
             fontSize: "1.2rem",
+            borderRadius: "8px", // Rounded corners for a modern look
+            fontWeight: "bold", // Bold text for emphasis
           }}
         >
           Sign In
