@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/earlyaccess/droidsansethiopic.css');
+
+body {
+    font-family: 'Droid Sans Ethiopic', serif !important;
+}
+
+#target, #target2 {
+    font-family: 'Droid Sans Ethiopic', serif !important;
+}
+
+.selected {
+    background-color: #351dd0;
+}

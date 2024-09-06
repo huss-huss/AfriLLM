@@ -159,7 +159,7 @@
 // export default DataEnterPage;
 
 // src/pages/DataEnterPage.js
-import React, { useState } from "react";
+import React, { useState, Component }  from "react";
 import {
   Button,
   TextField,
@@ -226,8 +226,9 @@ const DataEnterPage = () => {
     navigate("/data/form");
   };
 
+  
   return (
-    <Container maxWidth="sm" sx={{ mt: 5 }}>
+    <Container maxWidth="md" sx={{ mt: 5 }}>
       <Paper
         elevation={4}
         sx={{
@@ -236,7 +237,7 @@ const DataEnterPage = () => {
           backgroundColor: "#fafafa", // Light grey background
         }}
       >
-        <Box sx={{ mb: 4 }}>
+        <Box sx={{ mb: 6 }}>
           <Typography
             variant="h5"
             component="h1"
@@ -248,39 +249,39 @@ const DataEnterPage = () => {
               textAlign: "center",
             }}
           >
-            Enter Question {currentQuestionIndex} of {questions}
+            Enter Question and answer {currentQuestionIndex} of {questions}
           </Typography>
           <Typography
             variant="body1"
             color="textSecondary"
             sx={{ textAlign: "center" }}
           >
-            Please provide the question and its corresponding answer below.
+            
           </Typography>
         </Box>
 
+       
+
+
+        <h1>መፃፊያ ሣጥን/ Data Collection Box</h1>
+        <p>እዚህ ስጥን ዉስጥ ይፃፉ</p>
+        <p>Please provide the question and its corresponding answer below.</p>
         <form>
           {/* Question input */}
-          <TextField
+          {/* <TextField
             label="Question"
             fullWidth
             margin="normal"
             value={question}
             onChange={(e) => setQuestion(e.target.value)}
             sx={{ mb: 3 }} // Spacing
-          />
+          /> */}
 
-          {/* Answer input */}
-          <TextField
-            label="Answer"
-            fullWidth
-            margin="normal"
-            multiline
-            rows={3}
-            value={answer}
-            onChange={(e) => setAnswer(e.target.value)}
-            sx={{ mb: 3 }}
-          />
+<iframe src="/keyboard.html" title="Question" width="100%" height="100%" value={question} onChange={(e) => setQuestion(e.target.value)}></iframe>       
+
+    
+<iframe src="/keyboard.html" title="Answer" width="100%" height="100%" value={answer} onChange={(e)=> setAnswer(e.target.value)}></iframe>
+    
 
           <Box sx={{ display: "flex", justifyContent: "space-between", mt: 3 }}>
             {/* Show "Back" button if it's the first question */}

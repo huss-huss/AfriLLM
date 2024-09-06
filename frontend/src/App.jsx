@@ -46,6 +46,8 @@ import DataFormPage from "./pages/DataForm";
 import DataDonePage from "./pages/DataDone";
 import DataEnterPage from "./pages/DataEnter";
 import Settings from "./pages/Settings";
+// import AmharicKeyboard from "./pages/AmharicKeyboard"; 
+
 
 const App = () => {
   // A simple way to track login status (use a proper auth mechanism in real projects)
@@ -168,6 +170,7 @@ const App = () => {
             )
           }
         />
+         {/* <Route path="/amharic-keyboard" element={<AmharicKeyboard />} /> */}
       </Routes>
     </Router>
   );

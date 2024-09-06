@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="src/jquery/amharicKeyboard.jquery.js"></script>
+    <script>
+        var modeValue = "amharic";
+
+        $(document).ready(function () {
+            
+          var textarea =  $("#target").amharicKeyboard(); 
+            $("#target2").amharicKeyboard();
+            $(".mode").click(function () {
+                var $this = $(this);
+                //var textarea = $("#target").amharicKeyboard();
+                $(".mode").removeClass("selected");
+                $this.addClass("selected");
+
+                if ($this.val() === "እንግሊዝኛ")
+                    modeValue = "english";
+                else
+                    modeValue ="amharic";
+
+                textarea.changeMode(modeValue);
+
+
+            });
+        });
+    </script>
+    <style type="text/css">
+       @import url(http://fonts.googleapis.com/earlyaccess/droidsansethiopic.css);
+        body {
+            font-family: 'Droid Sans Ethiopic', serif !important;
+        }
+        #target, #target2 {
+                        font-family: 'Droid Sans Ethiopic', serif !important;
+        }
+        .selected { background-color:#4cff00;
+        }
+    </style>
+</head>
+<body>
+     <!-- <h1>መፃፊያ ሣጥን 1</h1>
+    <p>አማርኛና እንግሊዝኛን እያፈራረቁ ለመፃፍ የሚያስችል ሣጥን ምሣሌ</p> -->
+    <input type="hidden" id="mode" value="amharic" />
+    <input type="button" id="modeAmharic" class="mode selected" value="አማርኛ" />
+    <input type="button" id="modeEnglish" class="mode" value="English" /><br />
+    <textarea id="target" rows="6" cols="100"></textarea>
+   
+</body>
+</html>
